@@ -1,4 +1,4 @@
-# TheMonolith
+# The App Shell
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
@@ -25,3 +25,61 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Scaffold a new feature team
+
+```bash
+ng new team-name --strict --prefix at --style scss --routing
+cd team-name
+
+ng add @ngrx/store --defaults --skip-confirmation
+ng add @ngrx/effects --defaults --skip-confirmation
+ng add @ngrx/store-devtools --defaults --skip-confirmation
+ng add @angular/material --defaults --skip-confirmation
+npm i @mr-talk/mr-core @mr-talk/jokes @mr-talk/jokes-store
+```
+
+Add MrCoreModule, JokesStoreModule to app.module
+
+Replace HTML in app.component.html with <app-navigation></app-navigation>
+
+```bash
+ng g lib libname
+```
+
+Adapt package name to have project `@scope` in lib package.json and app tsconfig.json
+Remove crap from `libname`
+
+Register lib root Module in `AppRoutingModule`
+
+```bash
+ng build libname --watch (second shell)
+ng serve
+```
+
+Start migrating the features ...
+
+```bash
+ng build libname
+cd dist/libname
+npm publish --access public
+```
+
+...
+
+### In AppShell
+
+```bash
+npm i libname
+```
+
+Add Module to routing config.
+
+```typescript
+{
+    path: 'libname',
+    loadChildren: () => import('@scope/libname').then((m) => m.LibModule),
+  },
+```
+
+Verify everything works, then remove features from AppShell.
