@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "run-s build:libs build:app",
+    "build:libs": "ng build mr-core",
+    "build:app": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
@@ -57,6 +59,7 @@
     "jest-preset-angular": "^10.0.1",
     "lint-staged": "^11.2.3",
     "ng-packagr": "^12.1.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
     "typescript": "~4.3.5"
   },
