@@ -1,6 +1,6 @@
 {
-  "name": "the-monolith",
-  "short_name": "the-monolith",
+  "name": "the-app-shell",
+  "short_name": "the-app-shell",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
