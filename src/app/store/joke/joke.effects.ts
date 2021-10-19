@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, concatMap, map } from 'rxjs/operators';
-import { JokesService } from 'src/app/services/jokes.service';
 
+import { JokesService } from '../../services/jokes.service';
 import * as JokeActions from './joke.actions';
 
 @Injectable()

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { CounterFacade } from '../../store/counter/counter.facade';
+import { CounterFacade } from '@mr-talk/mr-core';
 
 @Component({
   selector: 'app-page1',

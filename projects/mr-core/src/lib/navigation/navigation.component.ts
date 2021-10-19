@@ -19,5 +19,9 @@ export class NavigationComponent {
   constructor(
     public readonly navigationService: NavigationService,
     private readonly breakpointObserver: BreakpointObserver
-  ) {}
+  ) {
+    navigationService.navigation$.subscribe((nav) => {
+      console.log('NAV', nav);
+    });
+  }
 }

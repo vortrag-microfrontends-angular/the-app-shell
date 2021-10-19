@@ -8,7 +8,7 @@ export class NavigationService {
   public readonly navigation$: Observable<ReadonlyArray<NavigationEntry>>;
 
   private readonly entries: Array<NavigationEntry> = [];
-  public readonly navigation$$: ReplaySubject<ReadonlyArray<NavigationEntry>> = new ReplaySubject(1);
+  private readonly navigation$$: ReplaySubject<ReadonlyArray<NavigationEntry>> = new ReplaySubject(1);
 
   constructor() {
     this.navigation$ = this.navigation$$.asObservable();

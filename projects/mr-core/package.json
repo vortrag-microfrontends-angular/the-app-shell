@@ -1,0 +1,16 @@
+{
+  "name": "@mr-talk/mr-core",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/cdk": "^12.2.10",
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@angular/material": "^12.2.10",
+    "@angular/router": "^12.2.0",
+    "@ngrx/store": "^12.5.0",
+    "rxjs": "~7.4.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

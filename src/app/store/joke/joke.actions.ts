@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { createAction, props } from '@ngrx/store';
-import { Joke } from 'src/app/models/joke.interface';
+
+import { Joke } from '../../models/joke.interface';
 
 export const loadJokes = createAction('[Joke] Load Jokes', props<{ num: number }>());
 export const loadJokesSuccess = createAction('[Joke] Load Jokes Success', props<{ data: Array<Joke> }>());

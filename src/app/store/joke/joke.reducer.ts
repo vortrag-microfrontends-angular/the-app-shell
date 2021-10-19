@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { createReducer, on } from '@ngrx/store';
-import { Joke } from 'src/app/models/joke.interface';
 
+import { Joke } from '../../models/joke.interface';
 import * as JokeActions from './joke.actions';
 
 export const jokeFeatureKey = 'joke';

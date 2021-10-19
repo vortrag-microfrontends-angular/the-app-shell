@@ -12,6 +12,9 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "paths": {
+      "@mr-talk/mr-core": ["dist/mr-core/mr-core", "dist/mr-core"]
+    },
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
