@@ -1,6 +1,0 @@
-<div class="page">
-  <ul>
-    <li *ngFor="let joke of facade.collection$ | async">{{ joke.joke }}</li>
-  </ul>
-  <button mat-raised-button (click)="facade.loadJokes(5)">Reload</button>
-</div>

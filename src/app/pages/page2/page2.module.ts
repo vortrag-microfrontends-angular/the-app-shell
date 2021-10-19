@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { RandomJokeModule } from '@mr-talk/jokes';
 import { NavigationService } from '@mr-talk/mr-core';
 
-import { RandomJokeModule } from '../../components/random-joke/random-joke.module';
 import { Page2Component } from './page2.component';
 
 @NgModule({

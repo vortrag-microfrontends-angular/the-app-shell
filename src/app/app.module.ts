@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { JokesStoreModule } from '@mr-talk/jokes-store';
 import { MrCoreModule } from '@mr-talk/mr-core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
@@ -11,7 +12,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { JokeModule } from './store/joke/joke.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,7 +31,7 @@ import { JokeModule } from './store/joke/joke.module';
     EffectsModule.forRoot([]),
 
     MrCoreModule,
-    JokeModule,
+    JokesStoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

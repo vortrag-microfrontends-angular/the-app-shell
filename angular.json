@@ -140,12 +140,8 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/mr-core/src/test.ts",
-            "tsConfig": "projects/mr-core/tsconfig.spec.json",
-            "karmaConfig": "projects/mr-core/karma.conf.js"
-          }
+          "builder": "@angular-builders/jest:run",
+          "options": {}
         }
       }
     }
