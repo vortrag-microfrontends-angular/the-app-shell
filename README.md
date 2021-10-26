@@ -50,6 +50,26 @@ ng g lib libname
 Adapt package name to have project `@scope` in lib package.json and app tsconfig.json
 Remove crap from `libname`
 
+Add all necessary dependencies provided by App Shell as `peerDependencies`.
+Example:
+
+```json
+{
+  "name": "@mr-talk/libname",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@angular/material": "^12.2.10",
+    "@mr-talk/mr-core": "*",
+    "@mr-talk/jokes-store": "*"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
+```
+
 Register lib root Module in `AppRoutingModule`
 
 ```bash
@@ -67,7 +87,7 @@ npm publish --access public
 
 ...
 
-### In AppShell
+### In App Shell
 
 ```bash
 npm i libname
