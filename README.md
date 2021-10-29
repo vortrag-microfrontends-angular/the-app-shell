@@ -39,9 +39,9 @@ ng add @angular/material --defaults --skip-confirmation
 npm i @mr-talk/mr-core @mr-talk/jokes @mr-talk/jokes-store
 ```
 
-Add MrCoreModule, JokesStoreModule to app.module
+Add MrCoreModule, JokesStoreModule, HttpClientModule to app.module
 
-Replace HTML in app.component.html with <app-navigation></app-navigation>
+Replace HTML in app.component.html with `<app-navigation></app-navigation>`
 
 ```bash
 ng g lib libname
@@ -71,6 +71,15 @@ Example:
 ```
 
 Register lib root Module in `AppRoutingModule`
+
+```typescript
+const routes: Routes = [
+  {
+    path: 'libname',
+    loadChildren: () => import('@mr-talk/libname').then((m) => m.LibnameModule),
+  },
+];
+```
 
 ```bash
 ng build libname --watch (second shell)
