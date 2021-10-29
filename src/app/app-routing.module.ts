@@ -25,6 +25,10 @@ export const routes: Routes = [
     path: 'jokes',
     loadChildren: () => import('@mr-talk/jokes').then((m) => m.Page3Module),
   },
+  {
+    path: 'other-pages',
+    loadChildren: () => import('@mr-talk/other-pages').then((m) => m.OtherPagesModule),
+  },
 ];
 
 @NgModule({

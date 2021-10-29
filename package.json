@@ -27,6 +27,7 @@
     "@angular/service-worker": "~12.2.0",
     "@mr-talk/jokes": "0.0.1",
     "@mr-talk/jokes-store": "0.0.2",
+    "@mr-talk/other-pages": "0.0.1",
     "@ngrx/effects": "^12.5.0",
     "@ngrx/store": "^12.5.0",
     "@ngrx/store-devtools": "^12.5.0",
